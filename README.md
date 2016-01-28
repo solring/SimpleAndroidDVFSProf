@@ -22,14 +22,21 @@ $ chmod 755 /data/local/tmp/profile_sys
 $ ./profile_sys [sampling sec] [sampling usec] [output file] [duration]
 
 ```
+The output will be a .csv file with:
+- CPU frequency
+- Working cycles of each core
+- Normalized utilization of each core
+- Number of process running
+- Number of context switches
+
 
 NOTE
 ====
 
 Since sysfs entries for CPU DVFS control vary among different devices, you may need to change the sysfs path/file names of the following entries in the source code :
 
-scaling_max_freq
-scaling_cur_freq
+- scaling_max_freq
+- scaling_cur_freq
 
 
 
